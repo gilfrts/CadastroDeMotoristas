@@ -1,5 +1,6 @@
 package Carros;
 
+import Motoristas.MotoristaModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,4 +23,7 @@ public class CarroModel {
 
     @Column(name = "placa")
     private String placa;
+
+    @OneToOne
+    private MotoristaModel motorista;
 }
